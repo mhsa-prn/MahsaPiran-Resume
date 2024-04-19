@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('short_description')->nullable();
             $table->text('summary')->nullable();
             $table->string('photo')->nullable();
-            $table->text('address')->nullable()->default('Damavand St, Tehran, Iran');
+            $table->text('address');
             $table->string('email')->default('mhsa.prn@gmail.com');
             $table->string('mobile')->default('+989904106192');
             $table->timestamps();

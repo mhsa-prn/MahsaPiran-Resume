@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('profile_data', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name')->default('Mahsa');
+            $table->string('last_name')->default('Piran');
+            $table->date('birth_date')->default('2000-12-28');
+            $table->string('gender')->default('Female')->value('','');
+            $table->text('short_description')->nullable();
+            $table->text('summary')->nullable();
+            $table->string('photo')->nullable();
+            $table->text('address')->nullable()->default('Damavand St, Tehran, Iran');
+            $table->string('email')->default('mhsa.prn@gmail.com');
+            $table->string('mobile')->default('+989904106192');
             $table->timestamps();
         });
     }

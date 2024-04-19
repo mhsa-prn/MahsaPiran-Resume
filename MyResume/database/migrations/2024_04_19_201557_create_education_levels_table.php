@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('education_levels', function (Blueprint $table) {
             $table->id();
             $table->string('degree');
-            $table->string('begin_year');
-            $table->string('end_year');
+            $table->integer('begin_year');
+            $table->integer('end_year');
             $table->string('institution_name');
-            $table->integer('gpa');
+            $table->decimal('gpa',4,2);
             $table->text('description')->nullable();
             $table->string('file')->nullable();
             $table->timestamps();

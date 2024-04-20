@@ -46,8 +46,12 @@
                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Social <b
                                         class="caret"></b> </a>
                                 <ul class="dropdown-menu social-menu">
-                                    <li><a href="#"><i class="social-icon twitter"></i> Twitter</a></li>
-                                    
+                                    <li><a href="https://x.com/wie_mond" target="_blank"><i class="social-icon twitter"></i>
+                                            Twitter</a></li>
+                                    <li><a href="https://www.linkedin
+                                    .com/in/mahsa-piran-77899015b?utm_source=share&utm_campaign=share_via&utm_content
+                                    =profile&utm_medium=ios_app" target="_blank"><i class="social-icon linkedin"></i>
+                                            Linkedin</a></li>
                                 </ul>
                             </li>
                         </ul>

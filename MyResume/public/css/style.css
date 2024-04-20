@@ -162,6 +162,10 @@ hr {
     background-image: url("../img/social-forrst.png");
 }
 
+.container .social-icon.linkedin {
+    background-image: url("../img/social-linkedin.png");
+}
+
 .container .nav-pills {
     font-size: 14px;
 }

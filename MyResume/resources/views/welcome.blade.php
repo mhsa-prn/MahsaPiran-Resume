@@ -185,24 +185,12 @@
                 <!-- Awards -->
                 <div class="tab-pane" id="awards">
                     <ul class="awards-list">
+                        @foreach($awards as $award)
                         <li>
-                            <h3 class="heading">“Elite Author” at ThemeForest </h3>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
-                                ante.</p>
-                            <a class="btn" href="#">Link</a></li>
-                        <li>
-                            <h3 class="heading">“Elite Author” at ThemeForest </h3>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
-                                ante.</p>
-                            <a class="btn" href="#">Link</a></li>
-                        <li>
-                            <h3 class="heading">“Elite Author” at ThemeForest </h3>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
-                                ante.</p>
-                            <a class="btn" href="#">Link</a></li>
+                            <h3 class="heading">{{$award->title}}</h3>
+                            <p>{{$award->description}}</p>
+                            <a class="btn" href="{{$award->file}}">Download</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <!-- ENDS Awards -->

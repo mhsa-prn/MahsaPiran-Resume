@@ -85,33 +85,23 @@
         <!-- Work -->
         <section id="work-section">
             <div class="page-header">
-                <h1>Featured Work <small>Selected items from my portfolio</small></h1>
+                <h1>Featured Work <small>  </small></h1>
             </div>
-            <ul class="thumbnails">
-                <li class="span4"><a href="img/dummies/b-01.jpg" class="thumbnail"> <img src="img/dummies/01.jpg"
-                                                                                         alt=""> </a> <span
-                        class="thumb-caption">Lorem Ipsum Dolor</span></li>
-                <li class="span4"><a href="img/dummies/b-02.jpg" class="thumbnail"> <img src="img/dummies/02.jpg"
-                                                                                         alt=""> </a> <span
-                        class="thumb-caption">Lorem Ipsum Dolor</span></li>
-                <li class="span4"><a href="img/dummies/b-03.jpg" class="thumbnail"> <img src="img/dummies/03.jpg"
-                                                                                         alt=""> </a> <span
-                        class="thumb-caption">Lorem Ipsum Dolor</span></li>
-            </ul>
-            <ul class="thumbnails">
-                <li class="span3"><a href="img/dummies/b-04.jpg" class="thumbnail"> <img src="img/dummies/04.jpg"
-                                                                                         alt=""> </a> <span
-                        class="thumb-caption">Lorem Ipsum Dolor</span></li>
-                <li class="span3"><a href="img/dummies/b-05.jpg" class="thumbnail"> <img src="img/dummies/05.jpg"
-                                                                                         alt=""> </a> <span
-                        class="thumb-caption">Lorem Ipsum Dolor</span></li>
-                <li class="span3"><a href="img/dummies/b-06.jpg" class="thumbnail"> <img src="img/dummies/06.jpg"
-                                                                                         alt=""> </a> <span
-                        class="thumb-caption">Lorem Ipsum Dolor</span></li>
-                <li class="span3"><a href="img/dummies/b-07.jpg" class="thumbnail"> <img src="img/dummies/07.jpg"
-                                                                                         alt=""> </a> <span
-                        class="thumb-caption">Lorem Ipsum Dolor</span></li>
-            </ul>
+            <table class="table experience-table">
+                <tbody>
+                @foreach($works as $work)
+                <tr>
+                    <td><h3 class="position">{{$work->title}}</h3>
+                        <p class="date"> <span style="background: lightgray; font-weight: bold">github:</span>
+                            <a href="https://github.com/mhsa-prn/Offline-Webinar">{{$work->github}}</a></p>
+                        <p><a href="/files/OfflineWebinar.zip">Download Document</a></p>
+                    </td>
+                    <td><p>{{$work->description}}</p>
+                    </td>
+                </tr>
+                @endforeach
+                </tbody>
+            </table>
         </section>
         <!-- ENDS work -->
         <!-- info -->

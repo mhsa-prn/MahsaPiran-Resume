@@ -26,7 +26,7 @@ class HomeController extends Controller
 
         $works=Work::all()->sortDesc();
 
-        return view('index',compact(
+        return view('welcome',compact(
             'profile_data',
             'awards',
             'experiences',

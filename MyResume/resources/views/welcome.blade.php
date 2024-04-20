@@ -170,22 +170,16 @@
                 <!-- ENDS Experience -->
                 <!-- Education -->
                 <div class="tab-pane listing" id="education">
+                    @foreach($education_levels as $education_level)
                     <div class="entry">
-                        <h3 class="heading">University of Wollongong in Dubai</h3>
-                        <span class="date">2011 – 2011</span>
-                        <p>Major or Area of study: Communication Studies, Business Management, Human Resources, Business
-                            Law, Business Studies, Digital Production, Print Production, Computer Science</p>
+                        <h3 class="heading">{{$education_level->degree}}</h3>
+                        <span class="date">{{$education_level->begin_year}} – {{$education_level->end_year}}</span>
+                        <p><span style="background: lightgray">Institution Name:</span>
+                            {{$education_level->institution_name}}</p>
+                        <p><span style="background: lightgray">GPA:</span>
+                            {{$education_level->gpa}}</p>
                     </div>
-                    <div class="entry">
-                        <h3 class="heading">Helwan University</h3>
-                        <span class="date">2004 – 2007</span>
-                        <p>Completed executive training in Sales Motivation, CRM, Management and Sales</p>
-                    </div>
-                    <div class="entry">
-                        <h3 class="heading">Cambridge International School</h3>
-                        <span class="date">1999- 2000</span>
-                        <p>IGCSE, Commerce</p>
-                    </div>
+                    @endforeach
                 </div>
                 <!-- ENDS Education -->
                 <!-- Awards -->

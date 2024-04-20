@@ -153,36 +153,17 @@
                 <div class="tab-pane" id="experience">
                     <table class="table experience-table">
                         <tbody>
+                        @foreach($experiences as $experience)
                         <tr>
-                            <td><h3 class="position">Digital Media Director</h3>
-                                <span class="date"> Sep 2011 - Present</span><small>That Company</small></td>
-                            <td><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                    egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
-                                    ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
-                                    Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-                                    Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
+                            <td><h3 class="position">{{$experience->position}}</h3>
+                                <span class="date"> {{$experience->begin_date}} -
+                                    {{$experience->end_date}}</span><small><a
+                                        href="{{$experience->company_website}}" target="_blank">{{$experience->company}}</a></small
+                                ></td>
+                            <td><p>{{$experience->description}}</p>
                             </td>
                         </tr>
-                        <tr>
-                            <td><h3 class="position">Chief Executive Officer</h3>
-                                <span class="date"> Oct 2000 - Sep 2011</span><small>Acme Toys</small></td>
-                            <td><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                    egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
-                                    ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
-                                    Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-                                    Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><h3 class="position">Media Engineer</h3>
-                                <span class="date"> Jan 1994 - Oct 2000</span><small>That Company</small></td>
-                            <td><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                    egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
-                                    ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
-                                    Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-                                    Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
-                            </td>
-                        </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

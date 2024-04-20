@@ -110,7 +110,7 @@
                 <h1>Information <small>Learn everything about me</small></h1>
             </div>
             <ul id="information-tabs" class="nav nav-pills ">
-                <li><a href="#summary" data-toggle="tab">Summary</a></li>
+{{--                <li><a href="#summary" data-toggle="tab">Summary</a></li>--}}
                 <li><a href="#skills" data-toggle="tab">Skills</a></li>
                 <li><a href="#experience" data-toggle="tab">Experience</a></li>
                 <li><a href="#education" data-toggle="tab">Education</a></li>
@@ -119,52 +119,34 @@
             <!-- tab content -->
             <div class="tab-content">
                 <!-- Summary -->
-                <div class="summary-section tab-pane active" id="summary">
-                    <p><strong>Resume is a free template</strong> It's responsive, HTML 5 valid all of this in one
-                        single page. It's fully documented and you can use it with no attribution or credit back
-                        required for commercial and personal projects, redistribution is not allowed if you want to use
-                        it in a different way please contact me.</p>
-                    <p>Thanks to thebeaststudio.com for sharing their work as placeholder images.</p>
-                    <p><strong>Some dummy text</strong> Pellentesque habitant morbi tristique senectus et netus et
-                        malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor
-                        sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
-                        Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum
-                        erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget
-                        tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim
-                        in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque
-                        egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt
-                        quis, accumsan porttitor, facilisis luctus, metus </p>
-                </div>
+{{--                <div class="summary-section tab-pane active" id="summary">--}}
+{{--                    <p><strong>Resume is a free template</strong> It's responsive, HTML 5 valid all of this in one--}}
+{{--                        single page. It's fully documented and you can use it with no attribution or credit back--}}
+{{--                        required for commercial and personal projects, redistribution is not allowed if you want to use--}}
+{{--                        it in a different way please contact me.</p>--}}
+{{--                    <p>Thanks to thebeaststudio.com for sharing their work as placeholder images.</p>--}}
+{{--                    <p><strong>Some dummy text</strong> Pellentesque habitant morbi tristique senectus et netus et--}}
+{{--                        malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor--}}
+{{--                        sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.--}}
+{{--                        Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum--}}
+{{--                        erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget--}}
+{{--                        tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim--}}
+{{--                        in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque--}}
+{{--                        egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt--}}
+{{--                        quis, accumsan porttitor, facilisis luctus, metus </p>--}}
+{{--                </div>--}}
                 <!-- ENDS Summary -->
                 <!-- Skills -->
                 <div class="tab-pane listing" id="skills">
+                    @foreach($skills as $skill)
                     <div class="entry">
                         <div class="clearfix">
-                            <div class="rating p"><i class="icon-star"></i> <i class="icon-star"></i> <i
-                                    class="icon-star"></i></div>
-                            <h3 class="heading pull-leasft">Web Design</h3>
+                            <div class="rating p"></div>
+                            <h3 class="heading pull-leasft">{{$skill->title}}</h3>
                         </div>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                            Vestibulum tortor quam, feugiat vitae, ultricies eget.</p>
+                        <p>{{$skill->description}}</p>
                     </div>
-                    <div class="entry">
-                        <div class="clearfix">
-                            <div class="rating p"><i class="icon-star"></i> <i class="icon-star"></i> <i
-                                    class="icon-star-empty"></i></div>
-                            <h3 class="heading pull-leasft">Web Development</h3>
-                        </div>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                            Vestibulum tortor quam, feugiat vitae, ultricies eget.</p>
-                    </div>
-                    <div class="entry">
-                        <div class="clearfix">
-                            <div class="rating p"><i class="icon-star"></i> <i class="icon-star-empty"></i> <i
-                                    class="icon-star-empty"></i></div>
-                            <h3 class="heading pull-leasft">Illustration</h3>
-                        </div>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                            Vestibulum tortor quam, feugiat vitae, ultricies eget.</p>
-                    </div>
+                    @endforeach
                 </div>
                 <!-- ENDS Skills -->
                 <!-- Experience -->
